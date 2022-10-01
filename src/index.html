@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+    <link href="./index.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+<main class="flex h-screen">
+    <div class="background flex-none w-[493px] flex flex-col justify-center">
+        <div class="cards text-white text-[1.4rem] tracking-[2px] leading-[1.8rem]">
+            <div class="card-1">
+                <object data="images/card-logo.svg"></object>
+                <div class="mt-[6.4rem] text-[2.8rem] leading-[3.6rem] tracking-[3.4px]" id="credit-card-number">
+                    <span>0000</span>
+                    <span>0000</span>
+                    <span>0000</span>
+                    <span>0000</span>
+                </div>
+                <div class="flex justify-between mt-[2.2rem]">
+                    <div class="uppercase" id="credit-card-name">
+                        Jane Appleseed
+                    </div>
+                    <div id="credit-card-expire">
+                        00/00
+                    </div>
+                </div>
+            </div>
+            <div class="card-2">
+                <div class="absolute top-[11.1rem] left-[35.8rem]" id="credit-card-cvc">000</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-auto justify-center items-center p-[22.7rem] pl-[34.9rem]">
+        <form id="credit-card-form" class="w-[38.1rem] text-[1.2rem] tracking-[2px] leading-[1.5rem]">
+            <label class="block uppercase mb-[2.6rem]">
+                Cardholder Name
+                <input type="text" placeholder="e.g. Jane Appleseed"
+                       class="form-input block w-full mt-[9px] text-[1.8rem]">
+            </label>
+            <label class="block uppercase mb-[2.6rem]">
+                Card Number
+                <input type="number" placeholder="e.g. 1234 5678 9123 0000"
+                       class="form-input block w-full mt-[9px] text-[1.8rem]">
+            </label>
+            <div class="flex gap-[2rem] mb-[4rem]">
+                <fieldset class="flex gap-[1rem]">
+                    <legend class="uppercase">Exp. Date (MM/YY)</legend>
+                    <label for="month" class="hidden">Month</label>
+                    <label for="year" class="hidden">Year</label>
+                    <input type="number" min="01" max="12" id="month" placeholder="MM"
+                           class="form-input mt-[9px] text-[1.8rem] w-[8rem]">
+                    <input type="number" min="22" id="year" placeholder="YY"
+                           class="form-input mt-[9px] text-[1.8rem] w-[8rem]">
+                </fieldset>
+                <label class="">
+                    CVC
+                    <input type="number" placeholder="e.g. 123" class="form-input mt-[9px] block text-[1.8rem]">
+                </label>
+            </div>
+
+            <button class="w-full py-[1.5rem] px-[15.6rem] bg-veryDarkViolet text-white rounded-[8px]">Confirm</button>
+        </form>
+        <div id="success-message" class="hidden text-center">
+            <object data="images/icon-complete.svg" class="mx-auto mb-[3.5rem]"></object>
+            <span class="block mb-[1.6rem] uppercase text-veryDarkViolet text-[2.8rem] leading-[3.6rem] tracking-[3.4px]">Thank you!</span>
+            <span class="block mb-[4.8rem] text-darkGrayishViolet text-[1.8rem] leading-[2.3rem]">We've added your card details</span>
+            <button id="dismiss-success-message" class="w-full py-[1.5rem] px-[15.6rem] bg-veryDarkViolet text-white rounded-[8px]">Continue</button>
+        </div>
+    </div>
+</main>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/movileanuv">Victor Movileanu</a>.
+</div>
+</body>
+</html>

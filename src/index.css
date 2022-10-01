@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: 62.5%; /* 10px */
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+.background {
+    background-image: url("images/bg-main-desktop.png");
+    background-size: cover;
+}
+
+.cards {
+    position: relative;
+    height: 52.7rem;
+    width: 54.1rem;
+    left: 16.4rem;
+}
+
+.card-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url("images/bg-card-front.png");
+    width: 44.7rem;
+    height: 24.5rem;
+    padding: 2.8rem 3.2rem;
+}
+
+.card-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url("images/bg-card-back.png");
+    width: 44.7rem;
+    height: 24.5rem;
+}
+
+.form-input {
+    /*border: 1px solid #DFDEE0;*/
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    line-height: 23px;
+    padding: 1.1rem 1.6rem;
+
+    /* Deep Violet */
+    color: #21092F;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
