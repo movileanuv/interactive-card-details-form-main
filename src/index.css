@@ -15,7 +15,7 @@ body {
 }
 
 .background {
-    background-image: url("images/bg-main-desktop.png");
+    background-image: url("images/bg-main-mobile.png");
     background-size: cover;
 }
 
@@ -52,6 +52,11 @@ body {
 }
 
 @screen xl {
+    .background {
+        background-image: url("images/bg-main-desktop.png");
+        background-size: cover;
+    }
+
     .cards {
         height: 52.7rem;
         width: 54.1rem;
