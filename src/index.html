@@ -24,12 +24,12 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-<main class="flex h-screen">
-    <div class="background flex-none w-[493px] flex flex-col justify-center">
-        <div class="cards text-white text-[1.4rem] tracking-[2px] leading-[1.8rem]">
+<main class="flex flex-col xl:flex-row h-screen">
+    <div class="background flex-none w-full xl:w-[493px] h-[24rem] xl:h-full flex flex-col justify-center">
+        <div class="cards text-white text-[0.9rem] xl:text-[1.4rem] tracking-[1.2px] xl:tracking-[2px] leading-[1.1rem] leading-[1.8rem]">
             <div class="card-1">
-                <object data="images/card-logo.svg"></object>
-                <div class="mt-[6.4rem] text-[2.8rem] leading-[3.6rem] tracking-[3.4px]" id="credit-card-number">
+                <img src="images/card-logo.svg" class="w-[5.4rem] xl:w-[8.7rem] h-[3rem] xl:h-[4.7rem]"></img>
+                <div class="mt-[3.7rem] xl:mt-[6.4rem] text-[1.8rem] xl:text-[2.8rem] leading-[2.3rem] xl:leading-[3.6rem] tracking-[2.2px] xl:tracking-[3.4px]" id="credit-card-number">
                     <span>0000</span>
                     <span>0000</span>
                     <span>0000</span>
@@ -45,23 +45,23 @@
                 </div>
             </div>
             <div class="card-2">
-                <div class="absolute top-[11.1rem] left-[35.8rem]" id="credit-card-cvc">000</div>
+                <div class="absolute top-[6.8rem] xl:top-[11.1rem] left-[22.9rem] xl:left-[35.8rem]" id="credit-card-cvc">000</div>
             </div>
         </div>
     </div>
-    <div class="flex flex-auto justify-center items-center p-[22.7rem] pl-[34.9rem]">
-        <form id="credit-card-form" class="w-[38.1rem] text-[1.2rem] tracking-[2px] leading-[1.5rem]">
-            <label class="block uppercase mb-[2.6rem]">
+    <div class="flex flex-auto justify-center items-center p-[2.4rem] pt-[9.1rem] xl:pt-2.4rem xl:pl-[27.9rem] xl:pr-[10rem]">
+        <form id="credit-card-form" class="w-[32.8rem] xl:w-[38.1rem] text-[1.2rem] tracking-[2px] leading-[1.5rem]">
+            <label class="block uppercase mb-[2rem] xl:mb-[2.6rem]">
                 Cardholder Name
                 <input type="text" placeholder="e.g. Jane Appleseed"
                        class="form-input block w-full mt-[9px] text-[1.8rem]">
             </label>
-            <label class="block uppercase mb-[2.6rem]">
+            <label class="block uppercase mb-[2rem] xl:mb-[2.6rem]">
                 Card Number
                 <input type="number" placeholder="e.g. 1234 5678 9123 0000"
                        class="form-input block w-full mt-[9px] text-[1.8rem]">
             </label>
-            <div class="flex gap-[2rem] mb-[4rem]">
+            <div class="flex gap-[2rem] mb-[2.8rem] xl:mb-[4rem]">
                 <fieldset class="flex gap-[1rem]">
                     <legend class="uppercase">Exp. Date (MM/YY)</legend>
                     <label for="month" class="hidden">Month</label>
@@ -77,7 +77,7 @@
                 </label>
             </div>
 
-            <button class="w-full text-[1.8rem] leading-[2.3rem] py-[1.5rem] px-[15.6rem] bg-veryDarkViolet text-white rounded-[8px]">Confirm</button>
+            <button class="w-full flex justify-center text-center text-[1.8rem] leading-[2.3rem] py-[1.5rem] bg-veryDarkViolet text-white rounded-[8px]">Confirm</button>
         </form>
         <div id="success-message" class="hidden text-center">
             <object data="images/icon-complete.svg" class="mx-auto mb-[3.5rem]"></object>
