@@ -15,12 +15,14 @@ function displaySuccessDiv() {
 function displayInputError(target, message) {
   const html = `<span class="error-message">${message}</span>`
   target.classList.add('invalid')
-  target.parentElement.insertAdjacentHTML('beforeend', html)
+  const container = target.closest('label') || target.closest('fieldset')
+  container.insertAdjacentHTML('beforeend', html)
 }
 
 function clearInputErrors(target) {
   target.classList.remove('invalid')
-  target.parentElement.querySelector('.error-message').remove()
+  const container = target.closest('label') || target.closest('fieldset')
+  container.querySelector('.error-message').remove()
 }
 
 function resetCreditCardForm() {
