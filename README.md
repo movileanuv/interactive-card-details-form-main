@@ -72,6 +72,7 @@ Users should be able to:
 ### Continued development
 
 * Tailwind CSS
+* Develop mobile first, since Tailwind's approach is more mobile first
 
 ## Author
 
